@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            #map { height: 100%; }
+            html, body { height: 100%; margin: 0; padding: 0; }
+        </style>
+        <script src="jquery-3.3.1.min.js"></script>
+        <script src="jsproxy.js"></script>
+        <script src="uav.js"></script>
+        <script src="map.js"></script>
+        <script>
+            //ready 이벤트가 발생 후에 지도 데이터를 받음
+            //이유: WebEngine의 SUCCEEDED State 상태를 빨리 만들어주기 위해
+            $(function() {
+                $(document.body).append('<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=geometry,drawing&callback=map.init" async defer><\/script>');
+            });
+        </script>
+    </head>
+    <body>
+        <div id="map"></div>
+    </body>
+</html>

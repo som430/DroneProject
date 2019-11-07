@@ -1,0 +1,161 @@
+.pane {
+    -fx-background-color: #353535
+}
+
+.pane2 {
+    -fx-background-color: #353535;
+    -fx-background-radius: 10;
+}
+
+.label {
+	-fx-text-fill:white;
+}
+
+.radio-button {
+	-fx-font-family: "Arial";
+	-fx-font-size: 14;
+	-fx-text-fill: white;
+}
+
+#zoomSlider {
+    -fx-background-color: #292929;
+}
+
+#zoomSlider .axis {
+	-fx-tick-label-fill: #00ff00;
+}
+
+#zoomSlider .thumb {
+	-fx-background-color: #ff0000;
+}
+
+.button {
+    -fx-text-fill:white;
+    -fx-font-weight: bold;
+    -fx-background-color:
+    linear-gradient(#686868 0%, #232723 25%, #373837 75%, #757575 100%),
+    linear-gradient(#020b02, #3a3a3a),
+    linear-gradient(#9d9e9d 0%, #6b6a6b 20%, #343534 80%, #242424 100%);
+    -fx-background-insets: 0,1,4;
+    -fx-background-radius: 9,8,5;
+}
+
+.button:pressed {
+    -fx-text-fill:white;
+    -fx-font-weight: bold;
+
+    -fx-background-color:linear-gradient(#686868 0%, #232723 25%, #373837 75%, #757575 100%);
+    -fx-background-insets: 0;
+    -fx-background-radius: 9;
+}
+
+.table-view .column-header {
+    -fx-background-color: #292929;
+    -fx-border-color: white;
+}
+
+.table-view .column-header-background{
+    -fx-background-color: #353535;
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: #353535;
+    -fx-text-fill: white;
+}
+
+.table-view .table-cell{
+    -fx-text-fill: white;
+    -fx-alignment: center;
+}
+
+.table-row-cell{
+    -fx-background-color: -fx-table-cell-border-color, #292929;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0;
+}
+
+.table-row-cell:odd{
+    -fx-background-color: -fx-table-cell-border-color, #424242;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #005797;
+    /*-fx-background-color: red;*/
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+
+.tab-pane {
+    -fx-tab-min-height: 30;
+    -fx-tab-max-height: 30;
+}
+.tab .tab-label {
+    -fx-background-color: transparent;
+    -fx-alignment: CENTER;
+    -fx-text-fill: #EBEAF0;
+}
+.tab {
+    -fx-background-insets: 0.0;
+    -fx-background-radius: 0.0;
+    -fx-background-color: #17181B;
+}
+.tab:selected {
+    -fx-background-color: #21477A;
+}
+.tab:focused {
+    -fx-focus-color: transparent;
+}
+.tab {
+    -fx-padding: 0 30 0 30;
+}
+.tab-pane *.tab-header-background {
+    -fx-background-color: #17181B;
+}
+.tab-pane:top *.tab-header-area {
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0 0 0 0;
+}
+.tab:selected .focus-indicator {
+    -fx-focus-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.tab-content-pane {
+	-fx-background-color: #353535
+}
+
+.menu-item .label {
+    -fx-text-fill: white;
+}
+
+.menu-item:focused {
+     -fx-background-color: #005797;
+}
+
+.menu-item:focused .label {
+    -fx-text-fill: red;
+}
+
+.context-menu {
+    -fx-skin: "com.sun.javafx.scene.control.skin.ContextMenuSkin";
+    -fx-background-color: black;
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 0 6 6 6, 0 5 5 5, 0 4 4 4;
+/*    -fx-padding: 0.666667em 0.083333em 0.666667em 0.083333em;  8 1 8 1 */
+    -fx-padding: 0.333333em 0.083333em 0.666667em 0.083333em; /* 4 1 8 1 */
+}
+
+.choice-box .label { -fx-text-fill: black; }
+.choice-box .context-menu { -fx-background-color: black; }
+.choice-box .menu-item:focused { -fx-background-color: orange; }
+.choice-box .menu-item > .label { -fx-text-fill: white; }
+.choice-box .menu-item:focused > .label { -fx-text-fill: black; }
+
+.separator *.line {
+    -fx-border-style: solid;
+    -fx-border-width: 0.5px;
+}
+
+

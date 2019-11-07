@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<SplitPane dividerPositions="0.5344986200551978" orientation="VERTICAL" prefHeight="1000.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="syk.gcs.mapview.FlightMapController">
+   <items>
+      <HBox>
+         <children>
+            <StackPane HBox.hgrow="ALWAYS">
+               <children>
+                  <WebView fx:id="webView" minHeight="-1.0" minWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" />
+                  <Label fx:id="lblInfo" alignment="CENTER" contentDisplay="CENTER">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+            <Slider fx:id="zoomSlider" majorTickUnit="2.0" max="20.0" min="3.0" minorTickCount="1" orientation="VERTICAL" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="3.0" />
+         </children>
+      </HBox>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <top>
+            <HBox spacing="10.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="btnAddTakeoff" maxWidth="1.7976931348623157E308" minHeight="30.0" mnemonicParsing="false" text="이륙" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="btnAddLand" maxWidth="1.7976931348623157E308" minHeight="30.0" mnemonicParsing="false" text="착륙" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="btnAddRTL" maxWidth="1.7976931348623157E308" minHeight="30.0" mnemonicParsing="false" text="복귀" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="btnAddROI" maxWidth="1.7976931348623157E308" minHeight="30.0" mnemonicParsing="false" text="관심" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="btnAddJump" maxWidth="1.7976931348623157E308" minHeight="30.0" mnemonicParsing="false" text="점프" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="btnAddDelay" maxWidth="1.7976931348623157E308" minHeight="30.0" mnemonicParsing="false" text="지연" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="btnAddAction" maxWidth="1.7976931348623157E308" minHeight="30.0" mnemonicParsing="false" text="액션" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="btnRemoveMissionItem" maxWidth="1.7976931348623157E308" minHeight="30.0" mnemonicParsing="false" text="삭제" HBox.hgrow="ALWAYS" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+         </top>
+         <center>
+            <TableView fx:id="missionTableView" styleClass="pane" BorderPane.alignment="CENTER">
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </center>
+         <right>
+            <VBox styleClass="pane" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="btnItemUp" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="상" VBox.vgrow="ALWAYS" />
+                  <Button fx:id="btnItemDown" maxHeight="1.7976931348623157E308" mnemonicParsing="false" text="하" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+         </right>
+      </BorderPane>
+   </items>
+</SplitPane>

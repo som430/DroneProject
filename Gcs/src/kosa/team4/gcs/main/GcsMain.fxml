@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<BorderPane fx:id="rootPane" minHeight="720.0" minWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" styleClass="pane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kosa.team4.gcs.main.GcsMainController">
+   <left>
+      <VBox maxWidth="350.0" minWidth="350.0" prefWidth="350.0" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <StackPane fx:id="hudPane" maxHeight="300.0" maxWidth="350.0" minHeight="300.0" minWidth="350.0" prefHeight="300.0" prefWidth="350.0" />
+            <HBox prefWidth="200.0" spacing="5.0" styleClass="pane2">
+               <children>
+                  <Button fx:id="btnMessageView" maxWidth="1.7976931348623157E308" minHeight="40.0" mnemonicParsing="false" text="메시지뷰" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="btnCameraView" maxWidth="1.7976931348623157E308" minHeight="40.0" mnemonicParsing="false" text="카메라뷰" HBox.hgrow="ALWAYS" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <StackPane fx:id="messageCamPane" VBox.vgrow="ALWAYS" />
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+   <center>
+      <StackPane fx:id="centerStackPane" alignment="TOP_LEFT" BorderPane.alignment="CENTER">
+         <children>
+            <BorderPane fx:id="centerBorderPane">
+            	<right>
+					<VBox minWidth="300.0" BorderPane.alignment="CENTER">
+					   <children>
+					      <Separator prefWidth="200.0" />
+					      <VBox prefWidth="100.0" spacing="5.0" styleClass="pane2">
+					         <children>
+					            <HBox spacing="10.0" styleClass="pane2">
+					               <children>
+					                  <Button fx:id="btnConnectConfig" maxHeight="40.0" maxWidth="1.7976931348623157E308" minHeight="40.0" mnemonicParsing="false" prefHeight="40.0" text="연결설정" HBox.hgrow="ALWAYS" />
+					                  <Button fx:id="btnConnect" maxHeight="40.0" maxWidth="1.7976931348623157E308" minHeight="40.0" mnemonicParsing="false" prefHeight="40.0" text="연결하기" HBox.hgrow="ALWAYS" />
+					                  <Button fx:id="btnArm" maxHeight="40.0" maxWidth="1.7976931348623157E308" minHeight="40.0" mnemonicParsing="false" prefHeight="40.0" text="시동걸기" HBox.hgrow="ALWAYS" />
+					               </children>
+					            </HBox>
+					         </children>
+					         <padding>
+					            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+					         </padding>
+					      </VBox>
+					      <Separator prefWidth="200.0" />
+					      <VBox prefWidth="100.0" spacing="5.0" styleClass="pane2">
+					         <children>
+					            <HBox alignment="CENTER_LEFT" spacing="5.0" styleClass="pane2">
+					               <children>
+					                  <TextField fx:id="txtTakeoffHeight" alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="20.0" text="10" HBox.hgrow="ALWAYS">
+					                     <font>
+					                        <Font size="16.0" />
+					                     </font>
+					                  </TextField>
+					                  <Label text="m">
+					                     <font>
+					                        <Font size="16.0" />
+					                     </font>
+					                     <HBox.margin>
+					                        <Insets right="10.0" />
+					                     </HBox.margin>
+					                  </Label>
+					                  <Button fx:id="btnTakeoff" maxHeight="40.0" maxWidth="1.7976931348623157E308" minHeight="40.0" mnemonicParsing="false" prefHeight="40.0" text="이륙" HBox.hgrow="ALWAYS" />
+					                  <Button fx:id="btnLand" maxHeight="40.0" maxWidth="1.7976931348623157E308" minHeight="40.0" mnemonicParsing="false" prefHeight="40.0" text="착륙" HBox.hgrow="ALWAYS" />
+					                  <Button fx:id="btnRtl" maxHeight="40.0" maxWidth="1.7976931348623157E308" minHeight="40.0" mnemonicParsing="false" prefHeight="40.0" text="복귀" HBox.hgrow="ALWAYS" />
+					               </children>
+					            </HBox>
+					         </children>
+					         <padding>
+					            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+					         </padding>
+					      </VBox>
+					      <Separator prefWidth="200.0" />
+					      <VBox prefWidth="100.0" spacing="5.0" styleClass="pane2">
+					         <children>
+					            <HBox alignment="CENTER_LEFT" spacing="10.0">
+					               <children>
+					                  <Button fx:id="btnManual" maxHeight="40.0" maxWidth="1.7976931348623157E308" minHeight="40.0" mnemonicParsing="false" prefHeight="40.0" text="수동제어" />
+					                  <CheckBox fx:id="chkManualMove" mnemonicParsing="false" selected="true" text="이동" />
+					                  <CheckBox fx:id="chkManualAlt" mnemonicParsing="false" text="고도" />
+					                  <TextField fx:id="txtManualAlt" alignment="CENTER_RIGHT" prefWidth="50.0" promptText="숫자" text="0.0" />
+					                  <Label text="m" />
+					               </children>
+					            </HBox>
+					         </children>
+					         <padding>
+					            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+					         </padding>
+					      </VBox>
+					      <Separator prefWidth="200.0" />
+					      <VBox prefWidth="100.0" spacing="5.0" styleClass="pane2">
+					         <children>
+					            <HBox spacing="10.0">
+					               <children>
+					                  <Button fx:id="btnMissionMake" maxHeight="40.0" maxWidth="1.7976931348623157E308" minHeight="40.0" mnemonicParsing="false" prefHeight="40.0" text="미션 생성" HBox.hgrow="ALWAYS" />
+					                  <Button fx:id="btnMissionClear" maxHeight="40.0" maxWidth="1.7976931348623157E308" minHeight="40.0" mnemonicParsing="false" prefHeight="40.0" text="미션 제거" HBox.hgrow="ALWAYS" />
+					               </children>
+					            </HBox>
+					            <HBox spacing="10.0">
+					               <children>
+					                    <Button fx:id="btnMissionUpload" maxHeight="40.0" maxWidth="1.7976931348623157E308" minHeight="40.0" mnemonicParsing="false" prefHeight="40.0" text="업로드  " HBox.hgrow="ALWAYS" />
+					                    <Button fx:id="btnMissionDownload" maxHeight="40.0" maxWidth="1.7976931348623157E308" minHeight="40.0" mnemonicParsing="false" prefHeight="40.0" text="다운로드" HBox.hgrow="ALWAYS" />
+					               </children>
+					            </HBox>
+					            <HBox spacing="10.0">
+					               <children>
+					                  <Button fx:id="btnMissionStart" maxHeight="40.0" maxWidth="1.7976931348623157E308" minHeight="40.0" mnemonicParsing="false" prefHeight="40.0" text="미션 시작" HBox.hgrow="ALWAYS" />
+					              <Button fx:id="btnMissionStop" maxHeight="40.0" maxWidth="1.7976931348623157E308" minHeight="40.0" mnemonicParsing="false" prefHeight="40.0" text="미션 중지" HBox.hgrow="ALWAYS" />
+					               </children>
+					            </HBox>
+					            <HBox spacing="10.0">
+					               <children>
+					              <Button fx:id="btnGetMissionFromFile" maxHeight="40.0" maxWidth="1.7976931348623157E308" minHeight="40.0" mnemonicParsing="false" prefHeight="40.0" text="파일 읽기" HBox.hgrow="ALWAYS" />
+					              <Button fx:id="btnSaveMissionToFile" maxHeight="40.0" maxWidth="1.7976931348623157E308" minHeight="40.0" mnemonicParsing="false" prefHeight="40.0" text="파일 저장" HBox.hgrow="ALWAYS" />
+					               </children>
+					            </HBox>
+					         </children>
+					         <padding>
+					            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+					         </padding>
+					      </VBox>
+					      <Separator prefWidth="200.0" />
+					      <VBox prefWidth="100.0" spacing="5.0" styleClass="pane2">
+					         <children>
+					            <HBox spacing="10.0">
+					               <children>
+					                  <Button fx:id="btnFenceMake" maxHeight="40.0" maxWidth="1.7976931348623157E308" minHeight="40.0" mnemonicParsing="false" prefHeight="40.0" text="펜스 생성" HBox.hgrow="ALWAYS" />
+					                  <Button fx:id="btnFenceClear" maxHeight="40.0" maxWidth="1.7976931348623157E308" minHeight="40.0" mnemonicParsing="false" prefHeight="40.0" text="펜스 제거" HBox.hgrow="ALWAYS" />
+					               </children>
+					            </HBox>
+					            <HBox spacing="10.0">
+					               <children>
+					                  <Button fx:id="btnFenceUpload" maxHeight="40.0" maxWidth="1.7976931348623157E308" minHeight="40.0" mnemonicParsing="false" prefHeight="40.0" text="업로드  " HBox.hgrow="ALWAYS" />
+					                  <Button fx:id="btnFenceDownload" maxHeight="40.0" maxWidth="1.7976931348623157E308" minHeight="40.0" mnemonicParsing="false" prefHeight="40.0" text="다운로드" HBox.hgrow="ALWAYS" />
+					               </children>
+					            </HBox>
+					            <HBox spacing="10.0">
+					               <children>
+					                  <Button fx:id="btnFenceEnable" maxHeight="40.0" maxWidth="1.7976931348623157E308" minHeight="40.0" mnemonicParsing="false" prefHeight="40.0" text="활성화  " HBox.hgrow="ALWAYS" />
+					                  <Button fx:id="btnFenceDisable" maxHeight="40.0" maxWidth="1.7976931348623157E308" minHeight="40.0" mnemonicParsing="false" prefHeight="40.0" text="비활성화" HBox.hgrow="ALWAYS" />
+					               </children>
+					            </HBox>
+					         </children>
+					         <padding>
+					            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+					         </padding>
+					      </VBox>
+					      <Separator prefWidth="200.0" />
+					      <VBox alignment="TOP_CENTER" prefWidth="100.0" spacing="5.0" styleClass="pane2" VBox.vgrow="ALWAYS">
+					         <children>
+								 <BorderPane fx:id="camPane" prefHeight="58.0" prefWidth="253.0" StackPane.alignment="BOTTOM_RIGHT">
+									 <StackPane.margin>
+										 <Insets bottom="10.0" right="20.0" />
+									 </StackPane.margin>
+									 <top>
+										 <Button fx:id="btnNorth" minHeight="40.0" minWidth="70.0" mnemonicParsing="false" text="▲ North" BorderPane.alignment="CENTER" />
+									 </top>
+									 <left>
+										 <Button fx:id="btnWest" minHeight="40.0" minWidth="70.0" mnemonicParsing="false" text="◀ West" BorderPane.alignment="CENTER" />
+									 </left>
+									 <right>
+										 <Button fx:id="btnEast" minHeight="40.0" minWidth="70.0" mnemonicParsing="false" text="East ▶" BorderPane.alignment="CENTER" />
+									 </right>
+									 <bottom>
+										 <Button fx:id="btnSouth" minHeight="40.0" minWidth="70.0" mnemonicParsing="false" text="▼ South" BorderPane.alignment="CENTER" />
+									 </bottom>
+								 </BorderPane>
+					         </children>
+					         <padding>
+					            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+					         </padding>
+					      </VBox>
+					   </children>
+					   <HBox.margin>
+					      <Insets />
+					   </HBox.margin>
+					</VBox>
+            	</right>
+            </BorderPane>
+         </children>
+      </StackPane>
+   </center>
+   <top>
+      <HBox alignment="CENTER_LEFT" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" text="Ground Control Station">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="34.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER_RIGHT" spacing="5.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button maxHeight="40.0" maxWidth="1.7976931348623157E308" minHeight="40.0" mnemonicParsing="false" text="서비스1" />
+				  <Button maxHeight="40.0" maxWidth="1.7976931348623157E308" minHeight="40.0" mnemonicParsing="false" text="서비스2" />
+				  <Button maxHeight="40.0" maxWidth="1.7976931348623157E308" minHeight="40.0" mnemonicParsing="false" text="서비스3" />
+               </children>
+               <HBox.margin>
+                  <Insets bottom="5.0" right="10.0" top="5.0" />
+               </HBox.margin>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>

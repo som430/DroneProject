@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CommonLib/CommonLib.iml" filepath="$PROJECT_DIR$/CommonLib/CommonLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Drone/Drone.iml" filepath="$PROJECT_DIR$/Drone/Drone.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Gcs/Gcs.iml" filepath="$PROJECT_DIR$/Gcs/Gcs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaFXBasic/JavaFXBasic.iml" filepath="$PROJECT_DIR$/JavaFXBasic/JavaFXBasic.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="syk.gcs.messageview.MessageViewController">
+    <children>
+      <HBox spacing="5.0">
+         <children>
+            <Button fx:id="btnReceiveMessage" maxWidth="1.7976931348623157E308" minHeight="40.0" minWidth="60.0" mnemonicParsing="false" text="받은 메시지" HBox.hgrow="ALWAYS" />
+            <Button fx:id="btnSendMessage" maxWidth="1.7976931348623157E308" minHeight="40.0" minWidth="60.0" mnemonicParsing="false" text="보낸 메시지" HBox.hgrow="ALWAYS" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+      <StackPane maxHeight="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox fx:id="receivePane">
+               <children>
+                    <ListView fx:id="listReceiveMessage" VBox.vgrow="ALWAYS" />
+                    <HBox alignment="CENTER_LEFT" spacing="5.0" styleClass="hbox">
+                        <children>
+                            <TextField fx:id="txtReceiveMsgId" minHeight="35.0" promptText="msgid,msgid,..." text="HEARTBEAT" HBox.hgrow="ALWAYS" />
+                            <Button fx:id="btnReceiveFilter" minHeight="40.0" minWidth="60.0" mnemonicParsing="false" text="Filter" />
+                            <Button fx:id="btnReceiveShowHide" minHeight="40.0" minWidth="60.0" mnemonicParsing="false" text="Hide" />
+                        <Button fx:id="btnReceiveClear" minHeight="40.0" minWidth="60.0" mnemonicParsing="false" text="Clear" />
+                        </children>
+                        <padding>
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        </padding>
+                    </HBox>
+               </children>
+            </VBox>
+            <VBox fx:id="sendPane" visible="false">
+               <children>
+                  <ListView fx:id="listSendMessage" VBox.vgrow="ALWAYS" />
+                  <HBox alignment="CENTER_LEFT" spacing="5.0" styleClass="hbox">
+                     <children>
+                        <TextField fx:id="txtSendMsgId" minHeight="35.0" promptText="msgid,msgid,..." text="HEARTBEAT" HBox.hgrow="ALWAYS" />
+                        <Button fx:id="btnSendFilter" minHeight="40.0" minWidth="60.0" mnemonicParsing="false" text="Filter" />
+                        <Button fx:id="btnSendShowHide" minHeight="40.0" minWidth="60.0" mnemonicParsing="false" text="Hide" />
+                        <Button fx:id="btnSendClear" minHeight="40.0" minWidth="60.0" mnemonicParsing="false" text="Clear" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+    </children>
+</VBox>

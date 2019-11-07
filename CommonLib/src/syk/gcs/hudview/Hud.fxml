@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.*?>
+<StackPane prefHeight="300.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="syk.gcs.hudview.HudController">
+   <children>
+      <Canvas fx:id="canvas0" height="300.0" width="350.0" />
+      <Canvas fx:id="canvas1" height="300.0" width="350.0" />
+      <Canvas fx:id="canvas2" height="300.0" width="350.0" />
+      <Canvas fx:id="canvas3" height="300.0" width="350.0" />
+      <AnchorPane fx:id="anchorPane" prefHeight="300.0" prefWidth="350.0">
+         <children>
+            <Label layoutX="305.0" layoutY="31.0" text="ALT">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblAltitude" alignment="CENTER_RIGHT" layoutX="265.0" layoutY="55.0" prefHeight="23.0" prefWidth="72.0" text="0 m">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblBattery" layoutX="9.0" layoutY="250.0" text="BAT: 0.0V  0.0A  0%">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblGpsFixed" alignment="CENTER_RIGHT" layoutX="231.0" layoutY="250.0" prefHeight="19.0" prefWidth="107.0" text="GPS No" textAlignment="RIGHT">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblArmed" layoutX="9.0" layoutY="234.0" text="DISARMED">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblMode" alignment="CENTER_RIGHT" layoutX="240.0" layoutY="234.0" prefHeight="23.0" prefWidth="100.0" text="STABLIZED" textAlignment="RIGHT">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblAirSpeed" layoutX="10.0" layoutY="192.0" text="AS 0m/s ">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblGroundSpeed" layoutX="9.0" layoutY="208.0" text="GS 0m/s ">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <Label id="lblStatusText" fx:id="lblStatusText" alignment="CENTER" layoutX="7.0" layoutY="50.0" prefHeight="100.0" prefWidth="337.0" text="HUD" textFill="RED">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <BorderPane minWidth="350.0" prefHeight="300.0" prefWidth="350.0">
+         <bottom>
+            <Button fx:id="btnCamera" mnemonicParsing="false" text="영상 보기" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+         </bottom>
+      </BorderPane>
+   </children>
+</StackPane>
